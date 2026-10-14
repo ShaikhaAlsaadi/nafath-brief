@@ -35,5 +35,7 @@ A Software Bill of Materials (SBOM) is a list of the components that make up a p
 Resource: The Minimum Elements For a Software Bill of Materials (SBOM) - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
 
 ## Misconception in My Track
+A common belief is that RPKI makes BGP fully secure. This is not correct. RPKI only helps a router check whether the network that originates a prefix is authorized to do so. It does not check the rest of the path, so it does not stop AS-in-the-middle attacks. An attacker only needs to prepend the valid origin AS to a forged route to defeat the protection. RFC 6811 says this in Section 6, "Security Considerations", and describes the protection as limited.
 
 ## Open Question
+I would like to verify how many networks in my region have published ROAs, and whether BGPsec could add path validation in practice.
