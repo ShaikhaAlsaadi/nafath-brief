@@ -20,10 +20,19 @@ OWASP MASVS is a security standard for mobile apps. Developers use it to build s
 Resource: OWASP MASVS - https://mas.owasp.org/MASVS/
 
 ## Networking
+BGP trusts that a network announcing a prefix is allowed to do so. A hijacker can announce a prefix it does not own, so traffic goes to the wrong network. RPKI uses signed objects called ROAs to link a network to the address blocks it may announce. Routers can mark each route as valid, invalid or not found. However, RPKI only checks the origin of a route. It does not validate the path, so it does not stop AS-in-the-middle attacks.
+
+Resource: RFC 6811 - BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
 
 ## Cybersecurity
+Log4Shell (CVE-2021-44228) was a flaw in Apache Log4j2, a popular Java logging library. If an attacker could control a log message, the library could load and run code from an attacker's LDAP server. It was rated 10.0 critical because it can be attacked over the network, is easy to exploit, needs no login, and has a high impact. It was fixed by turning the feature off in version 2.15.0 and removing it in 2.16.0.
+
+Resource: CVE-2021-44228 Detail - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
 
 ## Data
+A Software Bill of Materials (SBOM) is a list of the components that make up a piece of software, like the ingredients list on food. NTIA says an SBOM should have seven minimum data fields: supplier name, component name, component version, other unique identifiers, dependency relationship, author of the SBOM data, and timestamp. These fields help teams identify components and track them against vulnerability databases.
+
+Resource: The Minimum Elements For a Software Bill of Materials (SBOM) - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
 
 ## Misconception in My Track
 
